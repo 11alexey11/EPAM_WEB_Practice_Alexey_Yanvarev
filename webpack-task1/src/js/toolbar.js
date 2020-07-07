@@ -1,3 +1,9 @@
+const ioClient = io.connect('ws://voicy-speaker.herokuapp.com/')
+ioClient.on('connect', socket => {
+    ioClient.send('hello world')
+    ioClient.on('message', msg => console.log(msg))
+});
+
 function chooseMode(mode, el) {
     const activeText = document.getElementsByClassName("activeText");
     for (let i = 0; i < activeText.length; i++) {
@@ -13,5 +19,3 @@ function chooseMode(mode, el) {
 }
 
 document.getElementById("btnAllVoices").click();
-
-module.exports = {chooseMode};
