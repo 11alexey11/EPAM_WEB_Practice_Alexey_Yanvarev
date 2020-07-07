@@ -5,6 +5,7 @@
     <title>Task 2</title>
     <link rel='stylesheet' href='./dist/style.css'>
     <link rel="stylesheet" href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+    <script src= "/socket.io/socket.io.js" ></script> 
 </head>
 <body>
 <div class="page">
@@ -25,22 +26,6 @@
         <button class="barButton" onclick="chooseMode('Stream', this)" id="btnStream"><i class="fa fa-camera"></i><br /><br />Stream</button>
     </div>
 </div>
-<script type="text/javascript">
-    function chooseMode(mode, el) {
-        const activeText = document.getElementsByClassName("activeText");
-        for (let i = 0; i < activeText.length; i++) {
-            activeText[i].style.display = "none";
-        }
-
-        const barButton = document.getElementsByClassName("barButton");
-        for (let i = 0; i < barButton.length; i++) {
-            barButton[i].style.color = "";
-        }
-        document.getElementById(mode).style.display = "block";
-        el.style.color = '#3CB371';
-    }
-
-    document.getElementById("btnAllVoices").click();
-</script>
+<script src="src/js/toolbar.js"></script>
 </body>
 </html>
