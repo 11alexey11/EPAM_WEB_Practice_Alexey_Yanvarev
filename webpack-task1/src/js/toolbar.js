@@ -1,6 +1,4 @@
-import io from 'socket.io';
-
-function chooseMode(mode, el) {
+export function chooseMode(mode, el) {
     const activeText = document.getElementsByClassName("activeText");
     for (let i = 0; i < activeText.length; i++) {
         activeText[i].style.display = "none";
@@ -13,5 +11,3 @@ function chooseMode(mode, el) {
     document.getElementById(mode).style.display = "block";
     el.style.color = '#3CB371';
 }
-
-document.getElementById("btnAllVoices").click();
