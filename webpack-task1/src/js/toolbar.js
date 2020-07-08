@@ -1,4 +1,4 @@
-//import io from 'socket.io';
+import io from 'socket.io';
 
 function chooseMode(mode, el) {
     const activeText = document.getElementsByClassName("activeText");
