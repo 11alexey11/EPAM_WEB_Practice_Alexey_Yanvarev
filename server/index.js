@@ -7,8 +7,6 @@ let usercount = 1;
 
 app.use(cors());
 
-//app.use(express.static('../client/dist/index.html'));
-
 app.get('/index.html', (req, res) => {
     res.sendFile('index.html', { root: '../client/dist'});
 });
