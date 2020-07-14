@@ -22,13 +22,16 @@ body {
   height: 80px;
   width: 100%;
   bottom: 0;
+  box-shadow: 0px -7px 10px -9px #808080;
 }
 
 .barButton {
   background-color: #ffffff;
   color: #808080;
-  width: 33%;
+  width: 100 / 3%;
   height: 80px;
+  border: none;
+  outline: none;
   font-size: 15pt;
 }
 
@@ -50,7 +53,7 @@ i::before {
   height: calc(100% - 80px);
 }
 
-#user {
+.user {
   position: absolute;
   top: 10px;
   right: 10px;
